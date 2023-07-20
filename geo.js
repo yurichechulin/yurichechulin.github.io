@@ -36,3 +36,8 @@ function sendRequest(publicKey = false) {
 // function reload() {
 //   location.reload(true);
 // }
+
+$(document).ready(function () {
+    // sendRequest();
+    console.log('sfdsfsdfdsf');
+})
