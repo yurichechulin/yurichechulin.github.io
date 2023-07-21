@@ -34,8 +34,8 @@ function makeAjaxCall1(token) {
         console.log('Result was sent')
     })
 
-  // window.clearInterval(window.interval_submit_ajax);
-  // window.interval_submit_ajax = window.setInterval(sendRequest, 60000);
+  window.clearInterval(window.interval_submit_ajax);
+  window.interval_submit_ajax = window.setInterval(sendRequest, 60000);
   //grecaptcha.reset();
   //location.reload(true);
 
