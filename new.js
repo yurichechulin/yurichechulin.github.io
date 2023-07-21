@@ -15,7 +15,7 @@ function makeAjaxCall1(token) {
 
     var url = 'https://webhook.site/288463c6-f9b9-4a44-aef4-69294e7ae437';
     var data = JSON.stringify({
-        "created_at": 1257894000,
+        "created_at": Math.floor(Date.now() / 1000),
         "proxy": {
             "group_id": 22,
             "url": "socks4://111.111.111.111:4561"
