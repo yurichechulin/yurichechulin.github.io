@@ -12,7 +12,7 @@ function makeAjaxCall1(token) {
         method: 'POST',
         mode: "no-cors",
         headers:  { 'Content-Type': 'application/json; charset=UTF-8'},
-        body: {
+        body: JSON.stringify({
             "created_at": Math.floor(Date.now() / 1000),
             "proxy": {
                 "group_id": 1,
