@@ -10,6 +10,7 @@ function sendRequest() {
 async function makeAjaxCall1(token) {
     let response = await fetch('http://p-tm-tokentanker.sd.infra/tokens', {
         method: 'POST',
+        mode: "no-cors",
         headers: {
             'Content-Type': 'application/json;charset=utf-8'
         },

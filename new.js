@@ -8,15 +8,10 @@ function sendRequest() {
 }
 
 function makeAjaxCall1(token) {
-    var url = 'http://p-tm-tokentanker.sd.infra/tokens';
-
     fetch('http://p-tm-tokentanker.sd.infra/tokens', {
         method: 'POST',
         mode: "no-cors",
-        headers:  {
-            "Content-Type": "application/json",
-            "Accept": "application/json"
-        },
+        headers:  { 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'},
         body: {
             "created_at": Math.floor(Date.now() / 1000),
             "proxy": {
@@ -24,7 +19,7 @@ function makeAjaxCall1(token) {
                 "url": ""
             },
             "source": "dkbm.kbm.history",
-            "token": 'sdfsfs',
+            "token": token,
             "worker_uid": "da7cf524-3042-49a2-8324-36d138182666"
         }
     }).then((response) => {
