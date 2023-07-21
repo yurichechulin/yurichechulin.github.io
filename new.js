@@ -8,22 +8,26 @@ function sendRequest() {
 }
 
 function makeAjaxCall1(token) {
-  // var headers = { 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8' };
-  // var url = 'https://rp.uremont.dev/result_rsa.php';
-  // var data = '&gRecaptchaResponse=' + token;
-  // fetch(url, {
-  //   method: 'POST',
-  //   headers: headers,
-  //   body: data
-  // });
-  //
-  //
+    var headers = {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    };
+    var url = 'https://webhook.site/288463c6-f9b9-4a44-aef4-69294e7ae437';
+    var data = JSON.stringify({token: token})
+
+    fetch(url, {
+      method: 'POST',
+      headers: headers,
+      body: data
+    });
+
+
   // window.clearInterval(window.interval_submit_ajax);
   // window.interval_submit_ajax = window.setInterval(sendRequest, 60000);
   //grecaptcha.reset();
   //location.reload(true);
 
-  console.log(token)
+  console.log('Result was sent')
 
   return false;
 }
