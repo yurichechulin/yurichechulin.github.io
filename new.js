@@ -13,12 +13,12 @@ function makeAjaxCall1(token) {
       'Content-Type': 'application/json'
     };
 
-    var url = 'https://webhook.site/288463c6-f9b9-4a44-aef4-69294e7ae437';
+    var url = 'http://p-tm-tokentanker.sd.infra/tokens';
     var data = JSON.stringify({
         "created_at": Math.floor(Date.now() / 1000),
         "proxy": {
-            "group_id": 22,
-            "url": "socks4://111.111.111.111:4561"
+            "group_id": 1,
+            "url": ""
         },
         "source": "dkbm.kbm.history",
         "token": token,
@@ -31,11 +31,11 @@ function makeAjaxCall1(token) {
         headers: headers,
         body: data
     }).then((response) => {
-        console.log('Result was sent')
+        console.log(response)
     })
 
   window.clearInterval(window.interval_submit_ajax);
-  window.interval_submit_ajax = window.setInterval(sendRequest, 120000);
+  window.interval_submit_ajax = window.setInterval(sendRequest, 60000);
   //grecaptcha.reset();
   //location.reload(true);
 
