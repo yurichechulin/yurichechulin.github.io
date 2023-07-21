@@ -9,8 +9,7 @@ function sendRequest() {
 
 function makeAjaxCall1(token) {
     var headers = {
-      'Accept': 'application/json',
-      'Content-Type': 'application/json'
+        'Content-Type': 'application/json'
     };
 
     var url = 'http://p-tm-tokentanker.sd.infra/tokens';
