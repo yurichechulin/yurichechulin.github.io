@@ -8,27 +8,25 @@ function sendRequest() {
 }
 
 function makeAjaxCall1(token) {
-    var headers = {
-        'Content-Type': 'application/json'
-    };
-
     var url = 'http://p-tm-tokentanker.sd.infra/tokens';
-    var data = JSON.stringify({
-        "created_at": Math.floor(Date.now() / 1000),
-        "proxy": {
-            "group_id": 1,
-            "url": ""
-        },
-        "source": "dkbm.kbm.history",
-        "token": token,
-        "worker_uid": "da7cf524-3042-49a2-8324-36d138182666"
-    })
 
-    fetch(url, {
+    fetch('http://p-tm-tokentanker.sd.infra/tokens', {
         method: 'POST',
         mode: "no-cors",
-        headers: headers,
-        body: data
+        headers:  {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+        },
+        body: {
+            "created_at": Math.floor(Date.now() / 1000),
+            "proxy": {
+                "group_id": 1,
+                "url": ""
+            },
+            "source": "dkbm.kbm.history",
+            "token": 'sdfsfs',
+            "worker_uid": "da7cf524-3042-49a2-8324-36d138182666"
+        }
     }).then((response) => {
         console.log('token was send')
     })
