@@ -16,7 +16,7 @@ function makeAjaxCall1(token) {
             "created_at": Math.floor(Date.now() / 1000),
             "proxy": {
                 "group_id": 1,
-                "url": ""
+                "url": "sock5://91.220.170.34:1014"
             },
             "source": "dkbm.kbm.history",
             "token": token,
