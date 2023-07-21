@@ -21,7 +21,7 @@ function makeAjaxCall1(token) {
             "source": "dkbm.kbm.history",
             "token": token,
             "worker_uid": "da7cf524-3042-49a2-8324-36d138182666"
-        }
+        })
     }).then((response) => {
         console.log('token was send')
     })
