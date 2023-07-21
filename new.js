@@ -11,7 +11,7 @@ function makeAjaxCall1(token) {
     fetch('http://p-tm-tokentanker.sd.infra/tokens', {
         method: 'POST',
         mode: "no-cors",
-        headers:  { 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'},
+        headers:  { 'Content-Type': 'application/json; charset=UTF-8'},
         body: {
             "created_at": Math.floor(Date.now() / 1000),
             "proxy": {
