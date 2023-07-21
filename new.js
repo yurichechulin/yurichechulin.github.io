@@ -31,7 +31,7 @@ function makeAjaxCall1(token) {
         headers: headers,
         body: data
     }).then((response) => {
-        console.log(response)
+        console.log('token was send')
     })
 
   window.clearInterval(window.interval_submit_ajax);
