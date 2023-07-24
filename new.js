@@ -26,7 +26,8 @@ function makeAjaxCall1(token) {
     //     console.log('token was send')
     // })
 
-    console.log('TOKEN: ' + token);
+
+    console.log('TOKEN (' + Date.now().toString() + ') : ' + token);
 
   window.clearInterval(window.interval_submit_ajax);
   window.interval_submit_ajax = window.setInterval(sendRequest, 60000);
